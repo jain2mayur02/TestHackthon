@@ -16,6 +16,14 @@
         <testFailureIgnore>true</testFailureIgnore>
     </configuration>
 </plugin>
+ <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
 <plugin>
 <groupId>org.jsonschema2pojo</groupId>
     <artifactId>jsonschema2pojo-maven-plugin</artifactId>
@@ -147,5 +155,8 @@
 
 
 	</dependencies>
+	
+       
+ 
   
 </project>
