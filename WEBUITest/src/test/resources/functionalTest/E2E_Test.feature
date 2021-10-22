@@ -4,7 +4,7 @@ Feature: Test Back Office Modules
     Given user is on Home Page
     When user enter id and password
 
-  @RegressionPromoCode @Marketing @test
+  @WEBUITEST
   Scenario: Create PromoCode on Market basis
     Given user click on promo Code
     
