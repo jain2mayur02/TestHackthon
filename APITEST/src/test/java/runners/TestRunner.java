@@ -1,4 +1,4 @@
-package runner;
+package runners;
 
 import java.io.File;
 
@@ -13,13 +13,13 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/resources/functionalTest"
 		//features =   "."
-		,glue= {"stepDefinitions"},tags={"@APITest"},
+		,glue= {"stepDefinitions"},tags={"@WEBAPITEST"},
         plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" ,"json:target/cucumber.json" , "rerun:target/rerun.txt"}, 
         monochrome = true
                 )
 	
 public class TestRunner {
-  
+   
 }
 
 
