@@ -9,15 +9,23 @@
 <build>
 <plugins>
 <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.19.1</version>
+    <configuration>
+        <testFailureIgnore>true</testFailureIgnore>
+    </configuration>
+</plugin>
+<plugin>
 <groupId>org.jsonschema2pojo</groupId>
     <artifactId>jsonschema2pojo-maven-plugin</artifactId>
     <version>1.0.0</version>
     <executions>
     <execution>
     <id>request</id>
-    <goals>
+   <!--  <goals>
     <goal>generate</goal>
-    </goals>
+    </goals> -->
     <configuration>
     <sourceDirectory>${basedir}/src/test/resources/schema/testAPI/request</sourceDirectory>
     <targetPackage>com.testAPI.request</targetPackage>
@@ -26,9 +34,9 @@
     </execution>
     <execution>
     <id>response</id>
-    <goals>
+   <!--  <goals>
     <goal>generate</goal>
-    </goals>
+    </goals> -->
     <configuration>
     <sourceDirectory>${basedir}/src/test/resources/schema/testAPI/response</sourceDirectory>
     <targetPackage>com.testAPI.response</targetPackage>
