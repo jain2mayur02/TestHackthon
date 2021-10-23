@@ -1,12 +1,12 @@
-Feature: Test Back Office Modules
+Feature: Test EPAM Hackathon Scenarios
 
-  Background: User is Logged In
-    Given user is on Home Page
-    When user enter id and password
 
   @WEBUITEST
-  Scenario: Create PromoCode on Market basis
-    Given user click on promo Code
-    
+  Scenario: Test Scenario 1 
+    Given user navigate to youtube
+    Then user go to epam systems global channel and navigate to video section
+    And get all views one year ago
+    And generate fibonacci number
+    And pick vedio from fabinacci random even number
 
   

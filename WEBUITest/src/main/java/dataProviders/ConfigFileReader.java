@@ -59,12 +59,12 @@ public class ConfigFileReader {
 		else throw new RuntimeException("Browser Name Key value in Configuration.properties is not matched : " + browserName);
 	}
 
-	public String getApplicationUrl() throws InterruptedException {
+	/*public String getApplicationUrl() throws InterruptedException {
 		System.out.println("URL ==> "+ System.getProperty("env.url"));
 		String url = properties.getProperty(System.getProperty("env.url"));
 		if(url != null) return url;
 		else throw new RuntimeException("Application Url not specified in the Configuration.properties file for the Key:url");
-	}
+	}*/
 
 
 	public EnvironmentType getEnvironment() {

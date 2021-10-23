@@ -11,7 +11,7 @@
   <module>WEBUITest</module>
   <module>APITEST</module>
   <module>MOBILEAPPTEST</module>
-  
+  <module>DESKAPPTEST</module>
   </modules>
 
 
