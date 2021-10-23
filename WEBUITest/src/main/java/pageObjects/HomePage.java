@@ -18,7 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage {
 	static WebDriver driver;
 	public static Properties properties;
-	List<String> videoLists = null;
+	List<String> videoLists = new ArrayList<String>();
 	int randamindex;
 	
 
@@ -91,7 +91,6 @@ public void goto_Epam_Channel() throws InterruptedException {
 public void getallvediodetails() throws InterruptedException {
 
 	
-	videoLists = new ArrayList<String>();
 		
 		System.out.println("Count " + commandvediodetails.size());
 		
@@ -100,16 +99,17 @@ public void getallvediodetails() throws InterruptedException {
 		System.out.println( "Month" + uploadTimeStamp.get(j).getText());
 		System.out.println( "Name" + videoNameElement.get(j).getText());
 	
-		if(uploadTimeStamp.get(j).getText().contains("month") && uploadTimeStamp.get(j).getText().contains("weeks") && uploadTimeStamp.get(j).getText().contains("1 year")) {
+		//if(uploadTimeStamp.get(j).getText().contains("month") && uploadTimeStamp.get(j).getText().contains("weeks") && uploadTimeStamp.get(j).getText().contains("1 year")) {
 		
-			String videoName = videoNameElement.get(j).getText();
+		String videoName = videoNameElement.get(j).getText();
+		
 		videoLists.add(videoName);
 		
 		System.out.println("List =>" + videoLists);
 		System.out.println("List =>" + videoLists.add(videoName));
 	
 
-		}
+		
 		}
 		Collections.sort(videoLists);
 	
@@ -147,9 +147,9 @@ public int getfabonaci() throws InterruptedException {
 
 
 public void pickvedio()  {
-	System.out.println( "VedioList ==>" + videoLists.get(randamindex));
+	System.out.println( "VedioList ==>" + videoLists.size());
 	
-	driver.findElement(By.xpath("//ytd-two-column-browse-results-renderer//*[@id='contents']//*[@id='items']//*[@id='dismissible']//h3/a[@title="+videoLists.get(randamindex-1)+"]")).click();
+	driver.findElement(By.xpath("//ytd-two-column-browse-results-renderer//*[@id='contents']//*[@id='items']//*[@id='dismissible']//h3/a[@title='"+videoLists.get(randamindex-1)+"']")).click();
 	
 
 	
