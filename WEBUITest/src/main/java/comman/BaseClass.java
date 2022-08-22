@@ -36,6 +36,13 @@ public class BaseClass {
 	}
 	
 	
+
+	public BaseClass2(WebDriver driver) {
+		BaseClass.driver = driver;
+		PageFactory.initElements(driver, this);
+
+	}
+	
 	public static void selectdate(WebDriver driverclass,List<WebElement> datepicker,Integer PromoDayDate) 
 	{
 	
